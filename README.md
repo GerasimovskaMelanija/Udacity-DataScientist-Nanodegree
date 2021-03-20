@@ -1,3 +1,3 @@
 # Udacity-DataScientist-Nanodegree
 
-1.First project: Writing Data Science Blog Post
+1. First project: Writing Data Science Blog Post

@@ -4,7 +4,7 @@ If you want to read the discussion based on this dataset, you can read my post o
 
 # Libraries:
 
-To be able to run this notebook, you need to install these libraries:
+To be able to run this notebook, you need to install these libraries:<br />
 Pandas<br />
 Numpy<br />
 Seaborn<br />

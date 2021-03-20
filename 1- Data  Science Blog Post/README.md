@@ -5,11 +5,11 @@ If you want to read the discussion based on this dataset, you can read my post o
 # Libraries:
 
 To be able to run this notebook, you need to install these libraries:
-Pandas
-Numpy
-Seaborn
-Matplotlib
-Plotly
+Pandas<br />
+Numpy<br />
+Seaborn<br />
+Matplotlib<br />
+Plotly<br />
 
 # Description:
 This dataset is from Kaggle and can be used for different discussion, like exploring and understanding the global temperature, as well as the temperature for a specific country or city. In this project, we are using two files of the dataset: GlobalTemperatures.csv (Global Land and Ocean-and-Land Temperatures) and GlobalLandTemperaturesByCountry.csv (Global Average Land Temperature by Country). 

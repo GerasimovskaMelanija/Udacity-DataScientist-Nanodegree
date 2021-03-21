@@ -1,6 +1,6 @@
 # Data Science Blog Post - Udacity Data Scientist Nanodegree
 
-If you want to read the discussion based on this dataset, you can read my post on Medium. 
+If you want to read the discussion based on this dataset, you can read my post on [Medium](https://melanija-gerasimovska378.medium.com/should-we-really-worry-about-climate-change-6e78efdfd639). 
 
 # Libraries:
 

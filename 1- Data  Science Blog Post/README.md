@@ -27,6 +27,8 @@ The second file contains average temperatures for different countries.
 
 3.README Markdown File<br />
 
+If you want to read the discussion based on this dataset, you can read my post on [Medium](https://melanija-gerasimovska378.medium.com/should-we-really-worry-about-climate-change-6e78efdfd639). <br />
+
 
 # Results
 First, an analysis for the average global land temperature was made, and we came to a conclusion that the temperature of the land increased over the years, especially over the last 30 years. That is an indicator for a Global Warming. After that, an analysis for the average temperature of the countries was made, where we get the information about the country that has the higest average temperature and the country that has the lowest average temperature. We plot the changes of the temperature over the years for the two countries and we came to the same conclusion like in the first analysis. The conclusion is that the Global Warming is really happening and we have to take actions to stop it.
@@ -34,6 +36,4 @@ First, an analysis for the average global land temperature was made, and we came
 # Licensing, Authors, Acknowledgements
 This project was completed as part of the Udacity Data Scientist Nanodegree Program.<br />
 
-
-If you want to read the discussion based on this dataset, you can read my post on [Medium](https://melanija-gerasimovska378.medium.com/should-we-really-worry-about-climate-change-6e78efdfd639). 
 

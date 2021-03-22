@@ -1,5 +1,14 @@
 # Data Science Blog Post - Udacity Data Scientist Nanodegree
 
+# File Description
+
+1. Folder **input**, where you can find the dataset used for solving the problem. Also, you can find the dataset on [Kaggle](https://www.kaggle.com/berkeleyearth/climate-change-earth-surface-temperature-data).<br />
+
+2.**Jupyter Notebook**, where you can see the code.<br />
+
+3.README Markdown File<br />
+
+
 If you want to read the discussion based on this dataset, you can read my post on [Medium](https://melanija-gerasimovska378.medium.com/should-we-really-worry-about-climate-change-6e78efdfd639). 
 
 # Libraries:

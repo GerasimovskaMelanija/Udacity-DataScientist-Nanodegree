@@ -1,4 +1,4 @@
-# probability_function_dsnd
+# Tic Tac Toe
 
 This package can be used for playing game Tic Tac Toe.
 
@@ -17,7 +17,7 @@ It contains the following files:<br/>
 In order to install this package, you will have to run the following command:
 pip install tic-tac-toe-two-players
 
-When you install the package:
+When you install the package, this is the code you need in order to run the game:
 from tic_tac_toe_two_players import Game
 game = Game()
 game.run_game()

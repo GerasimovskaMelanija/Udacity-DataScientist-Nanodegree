@@ -48,6 +48,13 @@ def clean_data(df):
     number_of_dropped_duplicates = len(df)-len(df.drop_duplicates())
     # Also we will drop na values, because we won't need it in our further analysis
     df = df.dropna(subset=['related'], axis=0)
+    # After inspecting the categories columns, 'related' has three values = [0,1,2]
+    # We will convert the values 2 into values 1
+    df[df['related'] == 2] = 1
+    # Also, we can drop the column 'child alone', because it doesn't provide any important information
+    # because the values are all zero
+    # So, we can not use it for training, since the model won't know when to classify into that category
+    df = df.drop(['child_alone'], axis=1)
 
     return df
 

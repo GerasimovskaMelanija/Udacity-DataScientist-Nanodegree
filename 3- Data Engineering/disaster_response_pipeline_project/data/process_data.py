@@ -1,16 +1,58 @@
 import sys
+import pandas as pd
+from sqlalchemy import create_engine
+import sqlite3
 
 
 def load_data(messages_filepath, categories_filepath):
-    pass
+    """This function loads the two datasets, merges them into one dataframe and returns the dataframe as df """
+    # Read the first dataset
+    messages = pd.read_csv(messages_filepath) 
+    # Read the second dataset
+    categories = pd.read_csv(categories_filepath)
+    # Merge the two datasets using the common id
+    df = pd.merge(messages, categories, on="id")
+    return df
 
 
 def clean_data(df):
-    pass
+    # Split the values in the categories column on the ; character so that each value becomes a separate column.
+    categories = df['categories'].str.split(pat=';', expand=True)
+    # Use the first row of categories dataframe to create column names for the categories data.
+    row = categories.iloc[0]
+    first_extraction = []
+    for i in row:
+        m = i.split('-')
+        first_extraction.append(m[0])
+    category_colnames = first_extraction
+    # or simply categories[column].apply(lambda x: x.split('-')[1]
+    # rename the columns of `categories`
+    categories.columns = category_colnames
+
+    # Convert category values to just numbers 0 or 1.
+    for column in categories:
+        # set each value to be the last character of the string
+        categories[column] = [x.strip()[-1] for x in categories[column]]
+
+        # convert column from string to numeric
+        categories[column] = pd.to_numeric(categories[column])
+
+    # Replace categories column in df with new category columns
+    df.drop('categories', axis=1, inplace=True)
+    df = pd.concat([df, categories], axis=1)
+
+    # Remove duplicates
+    all_duplicates = df[df.duplicated(keep=False)]
+    df = df.drop_duplicates()
+    # If we want the number of dropped duplicates
+    number_of_dropped_duplicates = len(df)-len(df.drop_duplicates())
+
+    return df
 
 
 def save_data(df, database_filename):
-    pass  
+    engine = create_engine('sqlite:///d{}'.format(database_filename))
+    df.to_sql('Disaster_messages', engine, index=False)
 
 
 def main():

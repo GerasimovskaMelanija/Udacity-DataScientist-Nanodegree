@@ -46,13 +46,15 @@ def clean_data(df):
     df = df.drop_duplicates()
     # If we want the number of dropped duplicates
     number_of_dropped_duplicates = len(df)-len(df.drop_duplicates())
+    # Also we will drop na values, because we won't need it in our further analysis
+    df = df.dropna(subset=['related'], axis=0)
 
     return df
 
 
 def save_data(df, database_filename):
     engine = create_engine('sqlite:///d{}'.format(database_filename))
-    df.to_sql('Disaster_messages', engine, index=False)
+    df.to_sql('Disaster_messages', engine, index=False, if_exists = 'replace')
 
 
 def main():

@@ -22,8 +22,9 @@ nltk.download(['punkt','wordnet'])
 
 def load_data(database_filepath):
     """This function loads the dataset from database"""
-    engine = create_engine(database_filepath)
-    df = pd.read_sql_table('Disaster_Messages', con=engine)
+    engine = create_engine('sqlite:///{}'.format(database_filepath))
+    df = pd.read_sql_table('Disaster_messages', con=engine)
+    print(df.shape)
     X = df['message']
     Y = df.iloc[:, 4:]
     return X,Y
@@ -61,9 +62,9 @@ def build_model():
     ])
 
     # specify parameters for grid search
-    parameters = { 'features__text_pipeline__vect__ngram_range': ((1, 1), (1, 2)),
-                  'clf__n_neighbors'  : [5, 15],
-                  'clf__weights' : ['uniform', 'distance'],
+    parameters = { 'text_pipeline__vect__ngram_range': ((1, 1), (1, 2)),
+                  'clf__estimator__n_neighbors'  : [5, 15],
+                  #'clf__estimatoe__weights' : ['uniform', 'distance'],
 
     }
 
@@ -96,7 +97,7 @@ def main():
     if len(sys.argv) == 3:
         database_filepath, model_filepath = sys.argv[1:]
         print('Loading data...\n    DATABASE: {}'.format(database_filepath))
-        X, Y, category_names = load_data(database_filepath)
+        X, Y = load_data(database_filepath)
         X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2)
         
         print('Building model...')

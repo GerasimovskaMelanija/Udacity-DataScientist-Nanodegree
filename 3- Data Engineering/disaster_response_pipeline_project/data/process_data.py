@@ -60,7 +60,7 @@ def clean_data(df):
 
 
 def save_data(df, database_filename):
-    engine = create_engine('sqlite:///d{}'.format(database_filename))
+    engine = create_engine('sqlite:///{}'.format(database_filename))
     df.to_sql('Disaster_messages', engine, index=False, if_exists = 'replace')
 
 

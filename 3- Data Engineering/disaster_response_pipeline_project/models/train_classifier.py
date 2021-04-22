@@ -1,4 +1,6 @@
 import sys
+import nltk
+nltk.download(['punkt','wordnet'])
 # import libraries
 import re
 import numpy as np
@@ -17,8 +19,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.multioutput import MultiOutputClassifier
 from sklearn.metrics import f1_score
 from sklearn.metrics import classification_report
-import nltk
-nltk.download(['punkt','wordnet'])
+
 
 def load_data(database_filepath):
     """This function loads the dataset from database"""
@@ -57,20 +58,26 @@ def build_model():
                 ('tfidf', TfidfTransformer())
             ])),
 
-    
+        # We can try and Support Vector Machine Classifier, but it will take longer to train the model
         ('clf', MultiOutputClassifier(KNeighborsClassifier()))
+        # ('clf', MultiOutputClassifier(RandomForestClassifier()))
     ])
 
     # specify parameters for grid search
     parameters = { 'text_pipeline__vect__ngram_range': ((1, 1), (1, 2)),
-                  'clf__estimator__n_neighbors'  : [5, 15],
-                  #'clf__estimatoe__weights' : ['uniform', 'distance'],
+                  'clf__estimator__n_neighbors'  : [3, 5],
+                  # 'clf__estimator__weights' : ['uniform', 'distance'],
 
     }
+    """parameters = { 'features__text_pipeline__vect__ngram_range': ((1, 1), (1, 2)),
+                  'clf__estimator__n_estimators'  : [10, 50],
+                  'clf__estimator__max_depth' : [20, 30],
+
+    }"""
 
     # create grid search object
+    # cv = GridSearchCV(pipeline, param_grid = parameters, cv = 3)
     cv = GridSearchCV(pipeline, param_grid = parameters)
-    
     return cv
 
 

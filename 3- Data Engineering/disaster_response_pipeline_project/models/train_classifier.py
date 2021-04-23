@@ -89,22 +89,15 @@ def evaluate_model(model, X_test, y_test):
         print('For Column: ', col)
         print(classification_report(y_test.values[i], y_pred[i]))
 
+
         
-    # for i, col in enumerate(y_test):
-       # print('F1_score for Column: ', col)
-      #  print(f1_score(y_test.values[i], y_pred[i]))
+    for i, col in enumerate(y_test):
+       print('F1_score for Column: ', col)
+       print(f1_score(y_test.values[i], y_pred[i]))
     # accuracy = (y_pred == y_test).mean()  
     # print(accuracy)
        
 
-
-    for i, col in enumerate(y_test):
-        print('F1_score for Column: ', col)
-        print(f1_score(y_test.values[i], y_pred[i]))
-    # accuracy = (y_pred == y_test).mean()
-    # print(accuracy)
-
->>>>>>> 83cd476117d76e5eb4aa991bdd801bf442c0c9f9
 
 def save_model(model, model_filepath):
     """This function saves the model as pickle file"""

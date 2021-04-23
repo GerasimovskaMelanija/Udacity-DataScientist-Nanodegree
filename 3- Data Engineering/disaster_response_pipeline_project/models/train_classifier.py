@@ -91,9 +91,9 @@ def evaluate_model(model, X_test, y_test):
 
 
         
-    for i, col in enumerate(y_test):
-       print('F1_score for Column: ', col)
-       print(f1_score(y_test.values[i], y_pred[i]))
+    #for i, col in enumerate(y_test):
+       #print('F1_score for Column: ', col)
+       #print(f1_score(y_test.values[i], y_pred[i]))
     # accuracy = (y_pred == y_test).mean()  
     # print(accuracy)
        

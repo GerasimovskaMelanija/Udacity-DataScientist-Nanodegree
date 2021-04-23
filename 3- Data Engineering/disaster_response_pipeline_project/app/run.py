@@ -1,14 +1,15 @@
 import json
 import plotly
 import pandas as pd
-
+import nltk
+# import plotly.graph_objects as go
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
-
+nltk.download(['punkt','wordnet'])
 from flask import Flask
 from flask import render_template, request, jsonify
 from plotly.graph_objs import Bar
-from sklearn.externals import joblib
+import joblib
 from sqlalchemy import create_engine
 
 
@@ -44,6 +45,21 @@ def index():
     genre_names = list(genre_counts.index)
     
     # create visuals
+    # Second visualization
+    k = []
+    col = df.iloc[:,4:].columns
+    for x in col:
+        k.append(df[x].sum())
+
+
+    # Third visualization
+    fire = df['fire'].value_counts()[1]
+    floods = df['floods'].value_counts()[1]
+    earthquake = df['earthquake'].value_counts()[1]
+    storm = df['storm'].value_counts()[1]
+    other = df['other_weather'].value_counts()[1]
+    names = ['fire', 'floods', 'earthquake', 'storm', 'other_weather']
+    values = [fire, floods, earthquake, storm, other]
     # TODO: Below is an example - modify to create your own visuals
     graphs = [
         {
@@ -63,6 +79,42 @@ def index():
                     'title': "Genre"
                 }
             }
+        },
+        {
+            'data': [
+                Bar(
+                    x=col,
+                    y=k
+                )
+            ],
+
+            'layout': {
+                'title': 'Number of messages by group',
+                'yaxis': {
+                    'title': "Sum of messages"
+                },
+                'xaxis': {
+                    'title': "Groups"
+                }
+            }
+        },
+        {
+            'data': [
+                Bar(
+                    x=names,
+                    y=values
+                )
+            ],
+
+            'layout': {
+                'title': 'Messages based on weather',
+                'yaxis': {
+                    'title': "Total messages"
+                },
+                'xaxis': {
+                    'title': "Weather disaster"
+                }
+            }
         }
     ]
     
@@ -70,6 +122,8 @@ def index():
     ids = ["graph-{}".format(i) for i, _ in enumerate(graphs)]
     graphJSON = json.dumps(graphs, cls=plotly.utils.PlotlyJSONEncoder)
     
+    
+
     # render web page with plotly graphs
     return render_template('master.html', ids=ids, graphJSON=graphJSON)
 

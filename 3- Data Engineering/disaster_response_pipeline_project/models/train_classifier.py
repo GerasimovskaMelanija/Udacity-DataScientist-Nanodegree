@@ -1,7 +1,5 @@
 import sys
 import nltk
-nltk.download(['punkt','wordnet'])
-# import libraries
 import re
 import numpy as np
 import pandas as pd
@@ -19,6 +17,8 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.multioutput import MultiOutputClassifier
 from sklearn.metrics import f1_score
 from sklearn.metrics import classification_report
+nltk.download(['punkt', 'wordnet'])
+# import libraries
 
 
 def load_data(database_filepath):
@@ -28,20 +28,21 @@ def load_data(database_filepath):
     print(df.shape)
     X = df['message']
     Y = df.iloc[:, 4:]
-    return X,Y
+    return X, Y
+
 
 def tokenize(text):
     """This function tokenize the text"""
     # tokenize text
     tokens = word_tokenize(text)
-    
+
     # initiate lemmatizer
     lemmatizer = WordNetLemmatizer()
 
     # iterate through each token
     clean_tokens = []
     for tok in tokens:
-        
+
         # lemmatize, normalize case, and remove leading/trailing white space
         clean_tok = lemmatizer.lemmatize(tok).lower().strip()
         clean_tokens.append(clean_tok)
@@ -52,7 +53,7 @@ def tokenize(text):
 def build_model():
     """This function returns machine learning pipeline"""
     pipeline = Pipeline([
-            
+
             ('text_pipeline', Pipeline([
                 ('vect', CountVectorizer(tokenizer=tokenize)),
                 ('tfidf', TfidfTransformer())
@@ -64,8 +65,8 @@ def build_model():
     ])
 
     # specify parameters for grid search
-    parameters = { 'text_pipeline__vect__ngram_range': ((1, 1), (1, 2)),
-                  'clf__estimator__n_neighbors'  : [3, 5],
+    parameters = {'text_pipeline__vect__ngram_range': ((1, 1), (1, 2)),
+                  'clf__estimator__n_neighbors': [3, 5],
                   # 'clf__estimator__weights' : ['uniform', 'distance'],
 
     }
@@ -77,7 +78,7 @@ def build_model():
 
     # create grid search object
     # cv = GridSearchCV(pipeline, param_grid = parameters, cv = 3)
-    cv = GridSearchCV(pipeline, param_grid = parameters)
+    cv = GridSearchCV(pipeline, param_grid=parameters)
     return cv
 
 
@@ -87,6 +88,7 @@ def evaluate_model(model, X_test, y_test):
     for i, col in enumerate(y_test):
         print('For Column: ', col)
         print(classification_report(y_test.values[i], y_pred[i]))
+
         
     # for i, col in enumerate(y_test):
        # print('F1_score for Column: ', col)
@@ -95,10 +97,20 @@ def evaluate_model(model, X_test, y_test):
     # print(accuracy)
        
 
+
+    for i, col in enumerate(y_test):
+        print('F1_score for Column: ', col)
+        print(f1_score(y_test.values[i], y_pred[i]))
+    # accuracy = (y_pred == y_test).mean()
+    # print(accuracy)
+
+>>>>>>> 83cd476117d76e5eb4aa991bdd801bf442c0c9f9
+
 def save_model(model, model_filepath):
     """This function saves the model as pickle file"""
-    with open (model_filepath, 'wb') as pickle_file:
+    with open(model_filepath, 'wb') as pickle_file:
         pickle.dump(model, pickle_file)
+
 
 def main():
     if len(sys.argv) == 3:
@@ -106,13 +118,13 @@ def main():
         print('Loading data...\n    DATABASE: {}'.format(database_filepath))
         X, Y = load_data(database_filepath)
         X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2)
-        
+
         print('Building model...')
         model = build_model()
-        
+
         print('Training model...')
         model.fit(X_train, Y_train)
-        
+
         print('Evaluating model...')
         evaluate_model(model, X_test, Y_test)
 

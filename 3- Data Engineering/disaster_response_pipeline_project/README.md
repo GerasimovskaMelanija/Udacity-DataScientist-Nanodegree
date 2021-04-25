@@ -13,7 +13,8 @@
 
 3. Go to http://0.0.0.0:3001/
 
-The trained model with KNN can be found [here](https://drive.google.com/drive/folders/16oSTqkjX1KL7I3SXTcGkfWRUWMY_mdlx?usp=sharing). This file is too large to be uploaded on Github.<br/>
+ALso, there is a model trained with KNN and can be found [here](https://drive.google.com/drive/folders/16oSTqkjX1KL7I3SXTcGkfWRUWMY_mdlx?usp=sharing). This file is too large to be uploaded on Github.<br/>
+You can choose to use the model on the Github repository (RandomForestClassifier), or the other model with KNN.
 
 ## File Description
 1. Folder model (This folder contains the train_classifier.py python file, that contains the Machine Learning Pipeline for training the model and classifier.pkl, that is trained model with Random Forest Classifier).<br/>

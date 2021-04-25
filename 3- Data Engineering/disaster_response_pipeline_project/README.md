@@ -1,7 +1,7 @@
 # Disaster Response Pipeline Project
 
 ### Description
-In this project we are using dataset from Figure Eight in order to create disaster response pipeline. We created two pipelines: ETL and Machine Learning Pipeline. We have trained two different models, one with KNN and the other with RandomForestClassifier. The model with KNN gives us great results and can be found on this link [here](https://drive.google.com/drive/folders/16oSTqkjX1KL7I3SXTcGkfWRUWMY_mdlx?usp=sharing). This model is very large and can not be uploaded on Github. The other model with RandomForestClassifier does not give us very good results, and this model can be found in the folder models.<br/>
+In this project we are using dataset from Figure Eight in order to create disaster response pipeline. We created two pipelines: ETL and Machine Learning Pipeline. We have trained two different models, one with KNN and the other with RandomForestClassifier. The model with KNN gives us great results and can be found on this link [here](https://drive.google.com/drive/folders/16oSTqkjX1KL7I3SXTcGkfWRUWMY_mdlx?usp=sharing). This model is very large and can not be uploaded on Github. The other model with RandomForestClassifier does not give us very good results, and can be found on this [link](https://drive.google.com/drive/folders/1oAyrKBGHeqlA025xzfGmTB_oYrmpaMyM?usp=sharing). I suggest using the first model (with KNN).<br/>
 
 ### Libraries
 Numpy<br/>
@@ -15,7 +15,7 @@ Scipy<br>
 Nltk<br/>
 
 ### File Description
-1. Folder: models (This folder contains the train_classifier.py python file, that contains the Machine Learning Pipeline for training the model and classifier.pkl, a trained model with Random Forest Classifier).<br/>
+1. Folder: models (This folder contains the train_classifier.py python file, that contains the Machine Learning Pipeline for training the model.<br/>
 2. Folder: data (Contains the dataset used for training and testing the model, and contains a python file, used for data preprocessing and saving the data into database).<br/>
 3. Folder: app (Contains all files that we need for the web application).<br/>
 4. README file.<br/>

@@ -36,7 +36,10 @@ You should have all this folders if you want to run in locally. If you want to t
 3. Go to http://localhost:3001/
 
 ### Application
-Here are screenshots of the web application:
+Here are screenshots of the web application:<br/>
+
+This pictures are from the model with KNN.<br/>
+
 ![app1](https://user-images.githubusercontent.com/36305738/116004900-1c9c8880-a605-11eb-8980-ffeee403dbd6.png)
 ![app2](https://user-images.githubusercontent.com/36305738/116004921-2f16c200-a605-11eb-8bcb-d9a0c40d031d.png)
 ![app3](https://user-images.githubusercontent.com/36305738/116004937-3ccc4780-a605-11eb-9359-06524155a4be.png)
@@ -46,5 +49,6 @@ Here are screenshots of the web application:
 ![app7](https://user-images.githubusercontent.com/36305738/116004954-4950a000-a605-11eb-92e7-c4ff8e67ae2e.png)
 ![app8](https://user-images.githubusercontent.com/36305738/116004959-4d7cbd80-a605-11eb-86f9-b57b86bb0c09.png)
 
-
+### Licensing, Authors, Acknowledgements
+This project was completed as part of the Udacity Data Scientist Nanodegree Program.
 

@@ -13,7 +13,7 @@
 
 3. Go to http://0.0.0.0:3001/
 
-ALso, there is a model trained with KNN and can be found [here](https://drive.google.com/drive/folders/16oSTqkjX1KL7I3SXTcGkfWRUWMY_mdlx?usp=sharing). This file is too large to be uploaded on Github.<br/>
+Also, there is a model trained with KNN and can be found [here](https://drive.google.com/drive/folders/16oSTqkjX1KL7I3SXTcGkfWRUWMY_mdlx?usp=sharing). This file is too large to be uploaded on Github.<br/>
 You can choose to use the model on the Github repository (RandomForestClassifier), or the other model with KNN.
 
 ## File Description

@@ -19,6 +19,7 @@ Nltk<br/>
 2. Folder data (Contains the dataset used for training and testing the model, and contains a python file, used for data preprocessing and saving the data into database).<br/>
 3. Folder app (Contains all files that we need for the web application).<br/>
 4. README file.<br/>
+5. Application.py, Requirements.txt, Procfile and nltk.txt are for Flask and you do not need them if you want to run this app locally.
 
 ### Instructions: (If you want to try it on your local machine)
 You should have all this folders if you want to run in locally. If you want to try it from the beggining, then you should start from step 1, but if you want to use my model, then you should skip step 1.<br/>

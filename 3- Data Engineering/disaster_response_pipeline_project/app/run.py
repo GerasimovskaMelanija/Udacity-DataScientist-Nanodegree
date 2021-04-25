@@ -147,8 +147,8 @@ def go():
 
 
 def main():
-    # app.run(host='0.0.0.0', port=3001, debug=True)
-    pass
+    app.run(host='0.0.0.0', port=3001, debug=True)
+    # pass
 
 if __name__ == '__main__':
     main()

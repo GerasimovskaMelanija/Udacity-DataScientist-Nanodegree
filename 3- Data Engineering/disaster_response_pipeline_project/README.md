@@ -38,5 +38,13 @@ You should have all this folders if you want to run in locally. If you want to t
 ### Application
 Here are screenshots of the web application:
 ![app1](https://user-images.githubusercontent.com/36305738/116004900-1c9c8880-a605-11eb-8980-ffeee403dbd6.png)
+![app2](https://user-images.githubusercontent.com/36305738/116004921-2f16c200-a605-11eb-8bcb-d9a0c40d031d.png)
+![app3](https://user-images.githubusercontent.com/36305738/116004937-3ccc4780-a605-11eb-9359-06524155a4be.png)
+![app4](https://user-images.githubusercontent.com/36305738/116004944-405fce80-a605-11eb-9b5a-d4f055132760.png)
+![app5](https://user-images.githubusercontent.com/36305738/116004950-43f35580-a605-11eb-85f7-8a2564121796.png)
+![app6](https://user-images.githubusercontent.com/36305738/116004953-4655af80-a605-11eb-93e2-28d3e30f04a5.png)
+![app7](https://user-images.githubusercontent.com/36305738/116004954-4950a000-a605-11eb-92e7-c4ff8e67ae2e.png)
+![app8](https://user-images.githubusercontent.com/36305738/116004959-4d7cbd80-a605-11eb-86f9-b57b86bb0c09.png)
+
 
 

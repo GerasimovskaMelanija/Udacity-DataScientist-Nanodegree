@@ -60,26 +60,22 @@ def build_model():
             ])),
 
         # We can try and Support Vector Machine Classifier, but it will take longer to train the model
-        # ('clf', MultiOutputClassifier(KNeighborsClassifier()))
-        ('clf', MultiOutputClassifier(RandomForestClassifier()))
+        ('clf', MultiOutputClassifier(KNeighborsClassifier()))
+        # ('clf', MultiOutputClassifier(RandomForestClassifier()))
     ])
 
     # specify parameters for grid search
-    parameters = {'clf__estimator__n_estimators'  : [7, 20],
-                  'clf__estimator__max_depth' : [10, 17],
+    # parameters = {'clf__estimator__n_estimators'  : [7, 20],
+                  # 'clf__estimator__max_depth' : [10, 17],
                   # 'clf__estimator__weights' : ['uniform', 'distance'],
 
-    }
-    """parameters = { 'features__text_pipeline__vect__ngram_range': ((1, 1), (1, 2)),
-                  'clf__estimator__n_estimators'  : [10, 50],
-                  'clf__estimator__max_depth' : [20, 30],
+    # }
 
-    }"""
 
     # create grid search object
     # cv = GridSearchCV(pipeline, param_grid = parameters, cv = 3)
-    cv = GridSearchCV(pipeline, param_grid=parameters)
-    return cv
+    # cv = GridSearchCV(pipeline, param_grid=parameters)
+    return pipeline
 
 
 def evaluate_model(model, X_test, y_test):

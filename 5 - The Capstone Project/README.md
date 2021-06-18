@@ -5,7 +5,9 @@
 2. README file;<br />
 3. Main script: navigation_robots.ipynb;<br />
 4. Trained model: model.pkl;<br />
-5. File submission.csv with the final results of the model.<br />
+5. Wrangling scripts.<br />
+6. myapp<br/>
+7. myapp.py<br/>
 
 ## Libraries:
 1. Numpy<br />

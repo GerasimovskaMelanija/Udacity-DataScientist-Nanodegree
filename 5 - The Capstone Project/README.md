@@ -22,6 +22,11 @@ This project is part of the Udacity Nanodegree Program, as a final project. The 
 The main goal is to build a model that will predict on what type of floor the robot is standing and in that way, we can improve the robots navigation. I used cross-validation and Random Forest Classifier, and the accuracy of the best model is around 91%. There are still improvements that can be made, but for now, this is satisfying.<br/>
 
 ## Web application
+In order to run the web application, you need to have installed Flask. <br/>
+Open your terminal, enter the folder with all this files, enter python myapp.py <br/>
+Open: http://localhost:3001<br/>
+You will see plots of the distribution of the X,Y,Z and W orientations. Enter a number of series_id on which you want to see the distribution.<br/>
+
 
 ## Licensing, Authors, Acknowledgements
 This project is part of Data Scientist Nanodegree - Udacity.<br/>

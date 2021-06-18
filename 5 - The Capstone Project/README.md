@@ -31,6 +31,7 @@ You will see plots of the distribution of the X,Y,Z and W orientations. Enter a 
 ![tempsnip](https://user-images.githubusercontent.com/36305738/122585916-4ea5f600-d05c-11eb-8f15-23dab115aa75.png)
 ![222](https://user-images.githubusercontent.com/36305738/122585954-58c7f480-d05c-11eb-906d-0c4acfcef4bf.png)
 
+In this web application, we have only shown the distribution of the orientation, all other details about the data and explanations are in the jupyternotebook.
 
 ## Licensing, Authors, Acknowledgements
 This project is part of Data Scientist Nanodegree - Udacity.<br/>

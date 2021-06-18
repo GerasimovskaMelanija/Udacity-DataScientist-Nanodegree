@@ -4,7 +4,7 @@
 1. Folder Data (contains the data needed for this project, separated into X_train, X_test and Y_train);<br />
 2. README file;<br />
 3. Main script: navigation_robots.ipynb;<br />
-4. Trained model: model.pkl;<br />
+4. Model folder with Trained model: model.pkl;<br />
 5. Wrangling scripts.<br />
 6. myapp<br/>
 7. myapp.py<br/>

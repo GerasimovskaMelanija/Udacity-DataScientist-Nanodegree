@@ -26,6 +26,8 @@ In order to run the web application, you need to have installed Flask. <br/>
 Open your terminal, go into the folder with all this files, enter python myapp.py in your terminal <br/>
 Open: http://localhost:3001<br/>
 You will see plots of the distribution of the X,Y,Z and W orientations. Enter a number of series_id on which you want to see the distribution.<br/>
+![tempsnip](https://user-images.githubusercontent.com/36305738/122585916-4ea5f600-d05c-11eb-8f15-23dab115aa75.png)
+![222](https://user-images.githubusercontent.com/36305738/122585954-58c7f480-d05c-11eb-906d-0c4acfcef4bf.png)
 
 
 ## Licensing, Authors, Acknowledgements

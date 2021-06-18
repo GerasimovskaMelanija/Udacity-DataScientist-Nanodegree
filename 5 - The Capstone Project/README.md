@@ -23,7 +23,7 @@ The main goal is to build a model that will predict on what type of floor the ro
 
 ## Web application
 In order to run the web application, you need to have installed Flask. <br/>
-Open your terminal, enter the folder with all this files, enter python myapp.py <br/>
+Open your terminal, go into the folder with all this files, enter python myapp.py in your terminal <br/>
 Open: http://localhost:3001<br/>
 You will see plots of the distribution of the X,Y,Z and W orientations. Enter a number of series_id on which you want to see the distribution.<br/>
 

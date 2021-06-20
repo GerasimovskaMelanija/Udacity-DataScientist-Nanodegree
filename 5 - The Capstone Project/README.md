@@ -8,6 +8,7 @@
 5. Wrangling scripts.<br />
 6. myapp<br/>
 7. myapp.py<br/>
+8. pdf document: Capstone project, with description for every section of the project.<br/>
 
 ## Libraries:
 1. Numpy<br />
@@ -21,7 +22,7 @@
 
 ## Descripiton and motivation:
 This project is part of the Udacity Nanodegree Program, as a final project. The project is published on [Kaggle](https://www.kaggle.com/c/career-con-2019). I wanted to do something different, so I choosed this project on my own.<br />
-The main goal is to build a model that will predict on what type of floor the robot is standing and in that way, we can improve the robots navigation. I used cross-validation and Random Forest Classifier, and the accuracy of the best model is around 91%. There are still improvements that can be made, but for now, this is satisfying.<br/>
+The main goal is to build a model that will predict on what type of floor the robot is standing and in that way, we can improve the robots navigation. I used cross-validation and Random Forest Classifier, and the accuracy of the best model is around 95%. There are still improvements that can be made, but for now, this is satisfying.<br/>
 
 ## Web application
 In order to run the web application, you need to have installed Flask. <br/>
